@@ -67,6 +67,7 @@ for (let i = 0; i < posts.length; i++) {
     const postPictureDiv = document.createElement("div")
     postPictureDiv.setAttribute("class", "post-picture")
     const postPictureImg = document.createElement("img")
+    postPictureImg.setAttribute("data-post-index", i)
     postPictureImg.setAttribute("src", `${posts[i].post}`)
     // append post picture
     postInner.appendChild(postPictureDiv)
@@ -121,5 +122,14 @@ for (let i = 0; i < posts.length; i++) {
         post.likes += post.liked ? 1 : -1
         postLikesText.textContent = `${post.likes} likes`
         likeBtn.setAttribute("src", post.liked ? "images/icon-heart-filled.png" : "images/icon-heart.png");
+    })
+    const postPictureImgEl = postPictureImg
+    postPictureImgEl.addEventListener("dblclick", function(){
+        const imgIndex = postPictureImg.getAttribute("data-post-index")
+        const postImg = posts[imgIndex]
+        postImg.liked = !postImg.liked
+        postImg.likes += postImg.liked ? 1 : -1
+        postLikesText.textContent = `${postImg.likes} likes`
+        likeBtn.setAttribute("src", postImg.liked ? "images/icon-heart-filled.png" : "images/icon-heart.png");
     })
 }
