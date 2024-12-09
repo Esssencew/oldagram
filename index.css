@@ -105,3 +105,86 @@ html, body {
     margin-right: 5px;
     font-weight: 700;
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%; 
+        padding: 0; 
+    }
+    header .container {
+        margin-top: 0;
+    }
+
+    .logo {
+        width: 100px; 
+    }
+
+    .user-avatar {
+        width: 40px; 
+    }
+
+    .post-header__img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .post-picture {
+        width: 100%; 
+    }
+
+    .post-header__name {
+        font-size: 14px; 
+    }
+
+    .post-header__location {
+        font-size: 12px;
+    }
+
+    .post-buttons img {
+        width: 18px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .logo {
+        width: 80px; 
+    }
+
+    .user-avatar {
+        width: 35px; 
+    }
+
+    .post-header__img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .post-picture {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .post-header__name {
+        font-size: 16px; 
+    }
+
+    .post-header__location {
+        font-size: 14px; 
+    }
+
+    .post-buttons img {
+        width: 16px;
+    }
+
+    header .container {
+        margin-top: 0px;
+        padding: 5px 0;
+    }
+}
